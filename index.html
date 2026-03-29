@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AirSync Smart Airport Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h1>✈ AirSync Airport Flow Dashboard</h1>
+
+<div class="container">
+
+    <!-- Add Flight -->
+    <div class="card">
+        <h2>Add Flight</h2>
+        <input type="text" id="flightNo" placeholder="Flight Number">
+        <input type="text" id="destination" placeholder="Destination">
+        <select id="status">
+            <option>On Time</option>
+            <option>Boarding</option>
+            <option>Delayed</option>
+        </select>
+        <button onclick="addFlight()">Add Flight</button>
+    </div>
+
+    <!-- Flight Table -->
+    <div class="card">
+        <h2>Flight Status</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Flight</th>
+                    <th>Destination</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="flightTable"></tbody>
+        </table>
+    </div>
+
+    <!-- Congestion -->
+    <div class="card">
+        <h2>Crowd Congestion Level</h2>
+        <p id="congestionText">Loading...</p>
+    </div>
+
+    <!-- Large Graph -->
+    <div class="card full-width">
+        <h2>📊 Passenger Flow Analytics</h2>
+        <div class="chart-container">
+            <canvas id="crowdChart"></canvas>
+        </div>
+    </div>
+
+</div>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
